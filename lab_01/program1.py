@@ -2,7 +2,8 @@ def greeter(name):
     return "Hello "+name+"!"
 
 print(greeter("Stan"))
-print(greeter("Ollie"))
+print(greeter("Ollie"));
 
-print(repeat_string("hello"))
-
+def make_tags(tag,word)
+    result="<"+tag+">"+word+"<"+tag+">"
+    return result
