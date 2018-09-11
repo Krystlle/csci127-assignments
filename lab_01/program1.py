@@ -22,3 +22,6 @@ def extra_end(str):
     s=[-2:] * 3
     return s
 # negative numbers in [ ] refer to last characters in string
+def first_two(str):
+    result=str
+    return result[:2]
