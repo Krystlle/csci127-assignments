@@ -21,3 +21,4 @@ def make_out_word(out,word):
 def extra_end(str):
     s=[-2:] * 3
     return s
+# negative numbers in [ ] refer to last characters in string
