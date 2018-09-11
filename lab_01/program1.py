@@ -17,3 +17,7 @@ def make_out_word(out,word):
 #a[start:]    # items start through the rest of the array
 #a[:end]      # items from the beginning through end-1
 #a[:]         # a copy of the whole array
+
+def extra_end(str):
+    s=[-2:] * 3
+    return s
