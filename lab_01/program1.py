@@ -25,3 +25,9 @@ def extra_end(str):
 def first_two(str):
     result=str
     return result[:2]
+def first_half(str):
+    length=len(str)
+    first_half=str[length/2]
+    return first_half
+# len means length of characters in string
+#can divide or manipulate a named variable
