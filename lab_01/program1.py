@@ -31,3 +31,8 @@ def first_half(str):
     return first_half
 # len means length of characters in string
 #can divide or manipulate a named variable
+
+def without_end(str):
+    length=len(str)
+    without_end=lstr[1:length-1]
+    return without_end
