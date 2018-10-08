@@ -1,4 +1,4 @@
-#referenced Stacey Li's code to fix issues 
+#asked Stacey Li for help on #3 and #5
 
 import random
 
@@ -31,7 +31,7 @@ def locate(l,value):
     for the second. The function will
     look for value in the list
     and return its index.
-    Return -1 if value isn’t in the lsit.
+    Return -1 if value isn’t in the list.
     """
     l = []
     i = 0
@@ -42,8 +42,9 @@ def locate(l,value):
             print(l)
         else:
             print(-1)
-             
-l = locate(l,7)
+        l = locate(l,7)     
+    return l
+
 print(l)
 
 #2
@@ -63,7 +64,12 @@ def reverse(l):
     same elements as the original but with the
     values reversed.
     """
-
+ search = len(l) - 1
+    l2 = []
+    while search != -1:
+        l2.append(l(search))
+        search -= 1
+    return l2
 #4
 def isIncreasing(l):
     """
