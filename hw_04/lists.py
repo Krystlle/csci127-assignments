@@ -1,4 +1,4 @@
-#asked Stacey Li for #5 #2 
+#asked Stacey Li for help on #5 #2 
 
 import random
 
