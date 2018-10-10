@@ -71,6 +71,7 @@ def reverse(l):
         search -= 1
     return l2
 #4
+#iearning center assistance
 def isIncreasing(l):
     """
     This function should accept a list as its parameter.
@@ -79,7 +80,24 @@ def isIncreasing(l):
     element is greater than the previous. For example, the list 1,5,10,11,13
     is increasing while 1,5,3,6 and 1,4,4,6 are not.
     """
-    
+    i = len(l)-1 
+    while i > 1:
+        if (l[i - 2] > l[i]):
+            return False
+        i = i-1
+    return True
+
+def main():
+    #k = []
+    k = input("Enter a sequence of numbers: ")
+    if(isIncreasing(k)):
+        print("The list is in sequential order.")
+    else:
+        print("The list is not in sequential order.")
+        
+        
+main()
+
 #5
 def palindrome(l):
     """
@@ -88,3 +106,4 @@ def palindrome(l):
     left to right as it does right to left.
 
     """
+    l = 
