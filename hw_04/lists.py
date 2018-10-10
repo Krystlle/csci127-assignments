@@ -1,4 +1,4 @@
-#asked Stacey Li for help on #3 and #5
+#asked Stacey Li for #5 #2 
 
 import random
 
@@ -56,6 +56,15 @@ def count(l,value):
     It should return the number
     of times value appears in the list l
     """
+    a = 0
+    b = 0
+    while a < len(l):
+        if l[a] == value:
+            count += 1
+            search += 1
+        else:
+            search += 1
+    return count 
 #3
 def reverse(l):
     """
@@ -106,4 +115,24 @@ def palindrome(l):
     left to right as it does right to left.
 
     """
-    l = 
+    left = 0
+    right = len(l) - 1
+    isPalindrome = True
+    while left <= right :
+        if l[left] == l[right]:
+            left += 1
+            right-= 1
+        else:
+            isPalindrome = False
+            left += 1
+            right -= 1
+    return isPalindrome
+
+l = build_random_list(5, 10)
+value = random.randrange(0,10)
+print(l)
+print(value)
+print(locate(l, value))
+print(count(l, value))
+print(reverse(l))
+print(palindrome(l))
