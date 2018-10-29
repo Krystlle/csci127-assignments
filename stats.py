@@ -6,7 +6,7 @@ list = []
 highest = max(list)
 
 largest = list[0]
-for i in range (100):
+for i in range (0,10):
     list.append(random.randrange(0,11,1))
     if i == highest : 
         list.index(max(values))
