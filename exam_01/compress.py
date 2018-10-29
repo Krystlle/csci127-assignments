@@ -6,6 +6,7 @@ def compress_word(w):
         if vowels in w:
             print(w,len(w))
             select = len(w).replace(" ")
+            san_vowels = w - vowels
             sans_vowels[select] = w - vowels
             print(sans_vowels)
         else:
@@ -13,3 +14,9 @@ def compress_word(w):
         
 #test
 print(compress_word("Halloween"))
+
+def sentence(line)
+
+
+#test
+(sentence("I am so sorry I suck")) 
