@@ -4,19 +4,31 @@
 import random
 
 #choices made into dictionary
-#to be refined later bc it's not defined apparently
-choices = {
-"noun_place":["New York","California","Florida","Ohio","Massachusetts"]
-'noun_char': ["James", "Mary", "John", "Patricia", "Robert"]
-'pronoun': ["He", "She"]
-'adj_bad': ["antisocial", "cocky", "devious", "evil", "greedy"]
-'adj_good': ["loyal", "honest", "respectful", "responsible", "humble"]
-'verb': ["cry", "eat", "sleep", "dance", "walk"]
-'problem': ["diarrhea", "glutony", "procrastination"]
-'gerund'[ "stabbing", "sweating", "exploding"]
-'theme': ["sadness","death","love"]
-};
-return choices
+
+choices = {}
+#commented stuff below does not work but will look into later
+#choices = {
+#"noun_place":["New York","California","Florida","Ohio","Massachusetts"]
+#'noun_char': ["James", "Mary", "John", "Patricia", "Robert"]
+#'pronoun': ["He", "She"]
+#'adj_bad': ["antisocial", "cocky", "devious", "evil", "greedy"]
+#'adj_good': ["loyal", "honest", "respectful", "responsible", "humble"]
+#'verb': ["cry", "eat", "sleep", "dance", "walk"]
+#'problem': ["diarrhea", "glutony", "procrastination"]
+#'gerund'[ "stabbing", "sweating", "exploding"]
+#'theme': ["sadness","death","love"]
+#}
+
+choices['noun_place'] = ['New York', 'California', 'Florida','Ohio',"Massachusetts"]
+choices['noun_char'] = ["James", "Mary", "John", "Patricia", "Robert"]
+choices['pronoun'] = ["He", "She"]
+choices['adj_bad'] = ["antisocial", "cocky", "devious", "evil", "greedy"]
+choices['adj_good'] = ["loyal", "honest", "respectful", "responsible", "humble"]
+choices['verb'] = ["cry", "eat", "sleep", "dance", "walk"]
+choices['problem'] = ["diarrhea", "glutony", "procrastination"]
+choices['gerund'] = [ "stabbing", "sweating", "exploding"]
+choices['theme'] = ["sadness","death","love"]
+
 
 story = """The story unfolds in <SETTING> . The text revolves around <CHARACTER> .
  <PRONOUN> is <BADTRAIT> but <GOODTRAIT> . <CHARACTER2> wanted to <VERB> .
@@ -30,23 +42,22 @@ def pronoun_find(value):
          #if value == "John" or "James" or "Robert":  
                  #select = pronoun[0]
          if value == "John" or value == "James" or value == "Robert":  
-                 select = pronoun[0]
+                 select = choices['pronoun'][0]
          else:
-                 select = pronoun[1]
+                 select = choices['pronoun'][1]
          return select
      
 def madlibs(sentence):
      sentence = sentence.split()
      for element in sentence:
          if element == "<SETTING>":
-             select = random.choice(noun_place)
+             select = random.choice(choices['noun_place'])
              replacement = sentence.index(element)
              sentence[replacement] = select
              #print(sentence)
              #result = sentence
-             continue
          elif element == "<CHARACTER>":
-             select_name = random.choice(noun_char)
+             select_name = random.choice(choices['noun_char'])
              replacement = sentence.index(element)
              sentence[replacement] = select_name
              result_char = select_name
@@ -58,13 +69,13 @@ def madlibs(sentence):
              sentence[replacement] = answer
              continue
          elif element == "<BADTRAIT>":
-             select = random.choice(adj_bad)
+             select = random.choice(choices['adj_bad'])
              replacement = sentence.index(element)
              sentence[replacement] = select
              #print(sentence)
              continue
          elif element == "<GOODTRAIT>":
-             select = random.choice(adj_good)
+             select = random.choice(choices['adj_good'])
              replacement = sentence.index(element)
              sentence[replacement] = select
              #print(sentence)
@@ -75,13 +86,13 @@ def madlibs(sentence):
              #print(sentence)
              continue
          elif element == "<VERB>":
-             select = random.choice(verb)
+             select = random.choice(choices['verb'])
              replacement = sentence.index(element)
              sentence[replacement] = select
              #print(sentence)
              continue
          elif element == "<PROBLEM>":
-             select = random.choice(problem)
+             select = random.choice(choices['problem'])
              replacement = sentence.index(element)
              sentence[replacement] = select
              #print(sentence)
@@ -92,13 +103,13 @@ def madlibs(sentence):
              #print(sentence)
              continue
          elif element == "<GERUND>":
-             select = random.choice(gerund)
+             select = random.choice(choices['gerund'])
              replacement = sentence.index(element)
              sentence[replacement] = select
              #print(sentence)
              continue
          elif element == "<MESSAGE>":
-             select = random.choice(theme)
+             select = random.choice(choices['theme'])
              replacement = sentence.index(element)
              sentence[replacement] = select
              sentence = str(" ".join(sentence))
