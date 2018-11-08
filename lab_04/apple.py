@@ -1,3 +1,4 @@
+#a = location of apple tree , b = location of orange tree
 def countApplesAndOranges(s, t, a, b, apples, oranges):
     
     countApple = 0
