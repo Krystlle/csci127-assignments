@@ -46,5 +46,8 @@ common_words = [ [k,words[k]] for k in words if words[k] > 50 ]
 cw = common_words
 print(cw)
 
-add_values= [k for k in range(0,len(s)-1)]
-print(add_values)
+def add_values(k):
+    a = d + [k for k in range(0,len(s)-1)]
+    a.setdefault(s[k],[])
+    a[s[k]].append(s[k+1])
+    return a
