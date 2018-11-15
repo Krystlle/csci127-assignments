@@ -51,3 +51,4 @@ def add_values(k):
     a.setdefault(s[k],[])
     a[s[k]].append(s[k+1])
     return a
+print(a)
