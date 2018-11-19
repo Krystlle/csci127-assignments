@@ -3,4 +3,4 @@ def scrabble(w):
     scoring = 0
     for i in w:
         total = total+d[.lower()]
-    return total
+    return scoring
