@@ -1,1 +1,1 @@
-didnt finish encode and added scrabble late because I focused most of my energy on the first two questions
+didnt finish encode and added scrabble late de to focusing too much on first two questions, scrabble accounts only for the dictionary values and i intended on having the indivdual letters be counted ina test but didnt have time to include that part, only the scoring part is accounted for, not the 'assessing the letters' themselves part
