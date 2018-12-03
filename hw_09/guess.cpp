@@ -4,8 +4,6 @@ int main() {
   int input;
   int calc;
   int guess;
-  int min = 0 ;
-  int max = 99;
 
   stdd::cout <<"Enter a number from 0-99"
   stdd::cin >> input << stdd::endl;
