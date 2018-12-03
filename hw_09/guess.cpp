@@ -4,6 +4,12 @@ int main() {
   int input;
   int calc;
   int guess;
+  { strand(time(NULL)):
+    int answer = rand()%100;
+
+    int guess;
+
+    std::cout<<ans
 
   stdd::cout <<"Enter a number from 0-99"
   stdd::cin >> input << stdd::endl;
