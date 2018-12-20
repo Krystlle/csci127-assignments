@@ -6,13 +6,12 @@ def addLine(d,line):
     theRange = words.range(0, len(words))
     print(line)
     for letter in theRange:
-        if letter in words[0] == words[:+1]
-        d[words[letter]]
-        
-        d[word] = d[word] + 1
-    d.setdefault(0,line)
-    
-def
+        if letter in words[letter] == words[letter - 1] and letters in words[letter] == words[letter+1]:
+        d.setdefault(0,line)
+        d[words[letter]].append(words)
+            return d 
+        else:
+            return d
 
 #3.3
 def spellcheck(d,word):
